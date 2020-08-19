@@ -37,7 +37,10 @@ $ gcloud iam service-accounts keys create key.json \
 ### Add the Service Account Key to GitHub
 
 1. `Settings` in GitHub Repository
-2. `Secrets` -> `New secret`
+2. `Secrets` -> `New secret` -> The follwing 3 secrets
+3. `GCP_SA_KEY` : pricate key in `key.json`
+4. `GCP_SA_EMAIL` : client_email in `key.json`
+5. `GCP_PROJECT_ID` : gcloud config get-value project
 
 ## Demo
 
