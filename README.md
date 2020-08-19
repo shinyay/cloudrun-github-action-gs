@@ -12,6 +12,15 @@ $ gcloud iam service-accounts create github-action-deploy \
     --display-name="github-action-deploy"
 ```
 
+### Bind Roles
+This step will grant the minimum permission nesessary.
+
+- Cloud Run Admin
+  - `roles/run.admin`
+
+```
+$ gcloud projects add-iam-policy-binding (gcloud config get-value project) --member serviceAccount:github-action-deploy --role roles/run.admin
+```
 ## Demo
 
 ## Features
