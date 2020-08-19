@@ -4,6 +4,14 @@ Overview
 
 ## Description
 
+### Create a Service Account
+This step will create a Service Account which anthenticate GitHub Action calls to GCP project.
+```
+$ gcloud iam service-accounts create github-action-deploy \
+    --description="For GitHub Action" \
+    --display-name="github-action-deploy"
+```
+
 ## Demo
 
 ## Features
