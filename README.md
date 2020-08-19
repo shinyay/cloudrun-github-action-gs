@@ -17,9 +17,12 @@ This step will grant the minimum permission nesessary.
 
 - Cloud Run Admin
   - `roles/run.admin`
+- Storage Admin
+  - `roles/storage.admin`
 
 ```
-$ gcloud projects add-iam-policy-binding (gcloud config get-value project) --member serviceAccount:github-action-deploy --role roles/run.admin
+$ gcloud projects add-iam-policy-binding (gcloud config get-value project) --member serviceAccount:github-action-deploy@(gcloud config get-value project).iam.gserviceaccount.com --role roles/run.admin
+$ gcloud projects add-iam-policy-binding (gcloud config get-value project) --member serviceAccount:github-action-deploy@(gcloud config get-value project).iam.gserviceaccount.com --role roles/storage.admin
 ```
 ## Demo
 
