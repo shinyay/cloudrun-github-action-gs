@@ -41,6 +41,8 @@ $ gcloud iam service-accounts keys create key.json \
   --iam-account github-action-deploy@(gcloud config get-value project).iam.gserviceaccount.com
 ```
 
+![Srevice Account Key](images/key.png)
+
 ### Add the Service Account Key to GitHub
 
 1. `Settings` in GitHub Repository
