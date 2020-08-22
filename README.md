@@ -33,6 +33,8 @@ $ gcloud projects add-iam-policy-binding (gcloud config get-value project) --mem
 $ gcloud projects add-iam-policy-binding (gcloud config get-value project) --member serviceAccount:github-action-deploy@(gcloud config get-value project).iam.gserviceaccount.com --role roles/iam.serviceAccountUser
 ```
 
+![Role Binding](images/role.png)
+
 ### Create Service Account Key
 ```
 $ gcloud iam service-accounts keys create key.json \
