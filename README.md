@@ -112,6 +112,12 @@ jobs:
 $ gcloud run services list --platform managed
 ```
 
+### Confirm access Endpoint for Cloud Run App
+```
+$ gcloud run services describe <APP_NAME> --platform managed --region us-central1
+```
+
+
 ## Features
 
 - feature:1
