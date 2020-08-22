@@ -53,12 +53,16 @@ $ gcloud iam service-accounts keys create key.json \
 
 ![GitHubSecrets](images/github.png)
 
-### Create Actions File
+### Create Actions Configuration file
 Create Actions Configuration file on `.github/workflows/<GITHUB_ACTIONS>.yml`
+
 <details>
 <summary>
-- [cloudrun-build-deploy.yml](.github/workflows/cloudrun-build-deploy.yml)
+Actions Configuration file
 </summary>
+
+- [cloudrun-build-deploy.yml](.github/workflows/cloudrun-build-deploy.yml)
+
 ```
 name: publish
 
