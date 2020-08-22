@@ -51,6 +51,8 @@ $ gcloud iam service-accounts keys create key.json \
 4. `GCP_SA_EMAIL` : client_email in `key.json`
 5. `GCP_PROJECT_ID` : gcloud config get-value project
 
+![GitHubSecrets](images/github.png)
+
 ## Demo
 
 ## Features
