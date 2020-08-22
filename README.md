@@ -53,6 +53,55 @@ $ gcloud iam service-accounts keys create key.json \
 
 ![GitHubSecrets](images/github.png)
 
+### Create Actions File
+Create Actions Configuration file on `.github/workflows/<GITHUB_ACTIONS>.yml`
+<details>
+<summary>
+- [cloudrun-build-deploy.yml](.github/workflows/cloudrun-build-deploy.yml)
+</summary>
+```
+name: publish
+
+on: [push]
+
+jobs:
+  build:
+    name: Cloud Run Deployment
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup GCP Service Account
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: 'latest'
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Configure Docker
+        run: |
+          gcloud auth configure-docker
+      
+      - name: Build
+        run: |
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/hello-app:latest .
+      - name: Push
+        run: |
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/hello-app:latest
+      - name: Deploy
+        run: |
+          gcloud run deploy hello-app \
+          --region us-central1 \
+          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/hello-app \
+          --platform managed \
+          --allow-unauthenticated \
+          --project ${{ secrets.GCP_PROJECT_ID }}
+```
+</details>
+
 ## Demo
 
 ## Features
