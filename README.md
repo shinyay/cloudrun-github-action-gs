@@ -127,6 +127,11 @@ Traffic: https://hello-app-3xw7zcdwoq-uc.a.run.app
   :
 ```
 
+### Access Cloud Run Application
+```
+$ curl https://hello-app-3xw7zcdwoq-uc.a.run.app
+```
+
 ## Features
 
 - feature:1
