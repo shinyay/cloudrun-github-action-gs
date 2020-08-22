@@ -1,6 +1,6 @@
-# GitHub Action for Cloud Run Getting Started
+# GitHub Actions for Cloud Run Getting Started
 
-Overview
+This tutorial describes how to use [GitHub Actions](https://github.com/features/actions) for building app and deploying to Google Cloud Run
 
 ## Description
 
