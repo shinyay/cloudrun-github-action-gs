@@ -117,6 +117,15 @@ $ gcloud run services list --platform managed
 $ gcloud run services describe <APP_NAME> --platform managed --region us-central1
 ```
 
+```
+✔ Service hello-app in region us-central1
+ 
+Traffic: https://hello-app-3xw7zcdwoq-uc.a.run.app
+  100% LATEST (currently hello-app-00004-baw)
+
+  :
+  :
+```
 
 ## Features
 
