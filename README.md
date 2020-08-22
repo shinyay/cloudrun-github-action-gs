@@ -107,6 +107,10 @@ jobs:
 </details>
 
 ## Demo
+### Confirm deployed Cloud Run App
+```
+$ gcloud run services list --platform managed
+```
 
 ## Features
 
