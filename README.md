@@ -15,6 +15,8 @@ $ gcloud iam service-accounts create github-action-deploy \
     --display-name="github-action-deploy"
 ```
 
+![Service Account](images/sa.png)
+
 ### Bind Roles
 This step will grant the minimum permission nesessary.
 
