@@ -132,6 +132,11 @@ Traffic: https://hello-app-3xw7zcdwoq-uc.a.run.app
 $ curl https://hello-app-3xw7zcdwoq-uc.a.run.app
 ```
 
+### Clean up Application
+```
+$ gcloud run services delete hello-app --platform managed --region us-central1 --quiet
+```
+
 ## Features
 
 - feature:1
